@@ -1,0 +1,16 @@
+{
+  "name": "1-authentication-with-graphql-and-jwt",
+  "version": "1.0.0",
+  "description": "Demo project to showcase authentication using GraphQL and JWT on a Node.js server",
+  "main": "index.js",
+  "scripts": {
+    "start": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jkettmann/authentication-with-graphql-and-jwt.git"
+  },
+  "keywords": ["graphql", "authentication", "jwt", "node"],
+  "author": "Johannes Kettmann",
+  "license": "ISC"
+}
