@@ -2,6 +2,7 @@ export default class Session {
   constructor(request, response) {
     this.request = request;
     this.response = response;
+    this.userId = request.cookies.userId;
   }
 
   update(user) {
@@ -14,6 +15,6 @@ export default class Session {
       // use secure flag in production to send only via encrypted connections
       // secure: true,
     };
-    this.response.cookie('sessionToken', user.id, cookieOptions);
+    this.response.cookie('userId', user.id, cookieOptions);
   }
 }

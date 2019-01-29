@@ -24,7 +24,7 @@ const users = [
 
 const resolvers = {
   Query: {
-    currentUser: () => null,
+    currentUser: (obj, args, context) => users.find(user => context.session.userId === user.id),
   },
   Mutation: {
     login: (obj, args, context) => {
