@@ -29,7 +29,9 @@ const resolvers = {
   Mutation: {
     login: (obj, args, context) => {
       const { email, password } = args;
-      return users.find(user => user.password === password && user.email === email);
+      const matchingUser = users.find(user => user.password === password && user.email === email);
+      context.session.update(matchingUser);
+      return matchingUser;
     },
   },
 };
