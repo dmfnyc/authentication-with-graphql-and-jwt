@@ -4,13 +4,32 @@
   "description": "Demo project to showcase authentication using GraphQL and JWT on a Node.js server",
   "main": "index.js",
   "scripts": {
-    "start": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon --watch ./src --exec \"babel-node --presets=@babel/env ./src/index.js\""
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/jkettmann/authentication-with-graphql-and-jwt.git"
   },
-  "keywords": ["graphql", "authentication", "jwt", "node"],
+  "keywords": [
+    "graphql",
+    "authentication",
+    "jwt",
+    "node"
+  ],
   "author": "Johannes Kettmann",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^2.3.2",
+    "express": "^4.16.4",
+    "graphql": "^14.1.1",
+    "nodemon": "^1.18.9"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.15.0"
+  }
 }
